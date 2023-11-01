@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Healthy Eating</string>
+    <string name="calculate_calories">Посчитать калории</string>
+    <string name="add_product">Добавить продукт</string>
+    <string name="my_list">Мой список</string>
+    <string name="fats">Жиры</string>
+    <string name="squirrels">Белки</string>
+    <string name="bju">БЖУ на 100 гр/мл</string>
+    <string name="carbohydrates">Углеводы</string>
+    <string name="kilocalories">Ккал</string>
+    <string name="denomanation">Наименование</string>
+    <string name="weight">Вес (гр)</string>
+    <string name="quantity">Количество</string>
+    <string name="addAllReady">Уже добавлено</string>
+    <string name="dish">Блюдо</string>
+    <string name="forToday">За сегодня</string>
+    <string name="myList">Добавленные блюда</string>
+    <string name="productName">Название</string>
+    <string name="quantityWeight">%d гр</string>
+    <string name="quantities">%d шт</string>
+    <string name="eatingForToday">Добавить к списку</string>
+
+
+    <string name="EMPTY_NAME_ERROR">Название не должно быть пустым</string>
+    <string name="EMPTY_FIELD_ERROR">Поле не должно быть пустым</string>
+    <string name="ALL_READY_EXIST">Блюдо уже содержится в вашем списке</string>
+    <string name="DISH_NOT_FOUND">Сначала добавьте блюдо в свой список</string>
+    <string name="DISH_LIST_IS_EMPTY">Список пустой, сначала добавьте продукты к списку</string>
+
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

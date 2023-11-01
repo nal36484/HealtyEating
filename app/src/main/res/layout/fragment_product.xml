@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:id="@+id/bju"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bju"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/denomanation"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bju"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/productNameEdit"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productName"/>
+
+    <LinearLayout
+        android:id="@+id/squirrel"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productNameEdit">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/squirrels"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@string/squirrels"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:id="@+id/squirrelsDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="6"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fat"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/squirrel">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fats"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@string/fats"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:id="@+id/fatsDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="6"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/carbohydrate"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fat">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/carbohydrates"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@string/carbohydrates"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:id="@+id/carbohydratesDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="6"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:id="@+id/calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbohydrate">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/kilocalories"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@string/kilocalories"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:id="@+id/kilocaloriesDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="6"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/addProduct"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/add_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calories"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
