@@ -10,16 +10,10 @@ import com.example.healthyeating.domain.entities.Product
 import com.example.healthyeating.domain.usecases.dishes.GetAllDishesUseCase
 import com.example.healthyeating.domain.usecases.products.GetProductByName
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flatMapConcat
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.launch
-import timber.log.Timber
-import java.util.concurrent.atomic.AtomicInteger
 
 class TotalCalculateViewModel(
     private val getAllDishesUseCase: GetAllDishesUseCase,
@@ -38,8 +32,6 @@ class TotalCalculateViewModel(
 
     private val productList = mutableListOf<Product>()
 
-    private val completedCount = AtomicInteger(0)
-
     fun loadData() {
         viewModelScope.launch(Dispatchers.IO) {
             getAllDishes()
@@ -55,9 +47,7 @@ class TotalCalculateViewModel(
                     val product = getProductByName.execute(dish.name).first()
                     val formattedProduct = formatter.format(dish, product)
                     productList.add(formattedProduct)
-                    Timber.e(productList.toString() + "1")
                 }
-                Timber.e(productList.toString() + "2")
                 val total = calculateTotal(productList)
                 productList.add(total)
                 products.postValue(productList)
